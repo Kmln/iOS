@@ -5,6 +5,7 @@
 *.pbxuser
 *.xcuserstate
 xcuserdata/
+xcuserdatad/
 
 
 
