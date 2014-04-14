@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "Constants.h"
 
 @interface ProfileViewController ()
 
@@ -45,26 +46,103 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return PROFILE_NUMBER_SECTIONS;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (section == PROFILE_SECTION_ACCOUNT_INDEX)
+    {
+        return PROFILE_SECTION_ACCOUNT_ROWS;
+    }
+    else if (section == PROFILE_SECTION_PROFILE_INDEX)
+    {
+        return PROFILE_SECTION_PROFILE_ROWS;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == PROFILE_SECTION_ACCOUNT_INDEX)
+    {
+        return @"Account Information";
+    }
+    else if (section == PROFILE_SECTION_PROFILE_INDEX)
+    {
+        return @"Profile Details";
+    }
+    else
+    {
+        return @"";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ProfileCell" forIndexPath:indexPath];
+    UITableViewCell *valueCell = [tableView dequeueReusableCellWithIdentifier:PROFILE_CELL_ID_VALUE];
+    UITableViewCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:PROFILE_CELL_ID_BUTTON];
     
-//    if (cell == nil)
-//    {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ProfileCell"];
-//    }
     
-    [cell.textLabel setText:@"Brian Butterfield"];
+    if (indexPath.section == PROFILE_SECTION_ACCOUNT_INDEX)
+    {
+        if (indexPath.row == PROFILE_SECTION_ACCOUNT_USERNAME_ROW)
+        {
+            valueCell.textLabel.text = @"Username";
+            valueCell.detailTextLabel.text = @"patrick";
+            return valueCell;
+        }
+        else if (indexPath.row == PROFILE_SECTION_ACCOUNT_EMAIL_ROW)
+        {
+            valueCell.textLabel.text = @"Email";
+            valueCell.detailTextLabel.text = @"patrick@kmln.me";
+            return valueCell;
+        }
+        else if (indexPath.row == PROFILE_SECTION_ACCOUNT_LOGOUT_ROW)
+        {
+            UIButton *button = (UIButton *)[buttonCell viewWithTag:PROFILE_CELL_BUTTON_TAG];
+            [button setTitle:@"Logout" forState:UIControlStateNormal];
+            return buttonCell;
+        }
+    }
+    else if (indexPath.section == PROFILE_SECTION_PROFILE_INDEX)
+    {
+        if (indexPath.row == PROFILE_SECTION_PROFILE_CATEGORY_ROW)
+        {
+            valueCell.textLabel.text = @"Category";
+            valueCell.detailTextLabel.text = @"Woman's";
+            return valueCell;
+        }
+        else if (indexPath.row == PROFILE_SECTION_PROFILE_STYLE_ROW)
+        {
+            valueCell.textLabel.text = @"Style";
+            valueCell.detailTextLabel.text = @"Comtemporary";
+            return valueCell;
+        }
+        else if (indexPath.row == PROFILE_SECTION_PROFILE_COLOR_ROW)
+        {
+            valueCell.textLabel.text = @"Color";
+            valueCell.detailTextLabel.text = @"Neutral";
+            return valueCell;
+        }
+        else if (indexPath.row == PROFILE_SECTION_PROFILE_SIZE_ROW)
+        {
+            valueCell.textLabel.text = @"Size";
+            valueCell.detailTextLabel.text = @"2-3";
+            return valueCell;
+        }
+        else if (indexPath.row == PROFILE_SECTION_PROFILE_PRICE_ROW)
+        {
+            valueCell.textLabel.text = @"Price";
+            valueCell.detailTextLabel.text = @"Conservative";
+            return valueCell;
+        }
+    }
     
-    return cell;
+    return nil;
 }
 
 /*

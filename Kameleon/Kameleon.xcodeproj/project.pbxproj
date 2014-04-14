@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C06D0E918FAFF3300B7F408 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0E818FAFF3300B7F408 /* Constants.m */; };
 		4C7925D718EE7386000531F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925D618EE7386000531F1 /* Foundation.framework */; };
 		4C7925D918EE7387000531F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925D818EE7387000531F1 /* CoreGraphics.framework */; };
 		4C7925DB18EE7387000531F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925DA18EE7387000531F1 /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C06D0E718FAFF3300B7F408 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4C06D0E818FAFF3300B7F408 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		4C7925D318EE7386000531F1 /* Kameleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kameleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7925D618EE7386000531F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C7925D818EE7387000531F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C06D0E518FAF37800B7F408 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C79260E18F3B018000531F1 /* ProfileViewController.h */,
+				4C79260F18F3B018000531F1 /* ProfileViewController.m */,
+				4C79261118F3B31D000531F1 /* ClosetViewController.h */,
+				4C79261218F3B31D000531F1 /* ClosetViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C06D0E618FAF38400B7F408 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4C06D0E718FAFF3300B7F408 /* Constants.h */,
+				4C06D0E818FAFF3300B7F408 /* Constants.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		4C7925CA18EE7386000531F1 = {
 			isa = PBXGroup;
 			children = (
@@ -121,16 +144,14 @@
 		4C7925DC18EE7387000531F1 /* Kameleon */ = {
 			isa = PBXGroup;
 			children = (
-				4C79260E18F3B018000531F1 /* ProfileViewController.h */,
-				4C79260F18F3B018000531F1 /* ProfileViewController.m */,
+				4C06D0E618FAF38400B7F408 /* Common */,
+				4C06D0E518FAF37800B7F408 /* ViewControllers */,
 				4C7925E518EE7387000531F1 /* AppDelegate.h */,
 				4C7925E618EE7387000531F1 /* AppDelegate.m */,
 				4C7925E818EE7387000531F1 /* Main_iPhone.storyboard */,
 				4C7925EB18EE7387000531F1 /* Main_iPad.storyboard */,
 				4C7925F118EE7387000531F1 /* Images.xcassets */,
 				4C7925DD18EE7387000531F1 /* Supporting Files */,
-				4C79261118F3B31D000531F1 /* ClosetViewController.h */,
-				4C79261218F3B31D000531F1 /* ClosetViewController.m */,
 			);
 			path = Kameleon;
 			sourceTree = "<group>";
@@ -279,6 +300,7 @@
 				4C79261318F3B31D000531F1 /* ClosetViewController.m in Sources */,
 				4C79261018F3B018000531F1 /* ProfileViewController.m in Sources */,
 				4C79261818F3D251000531F1 /* AsyncImageDownloader.m in Sources */,
+				4C06D0E918FAFF3300B7F408 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
