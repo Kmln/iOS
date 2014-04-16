@@ -12,6 +12,8 @@
 	<dict>
 		<key>7D95F906-6EE8-4181-A994-A0D0CC1104A9</key>
 		<string>https://github.com/Kmln/iOS.git</string>
+		<key>CB9BC561-A826-42F4-AD0A-D524CF76B932</key>
+		<string>https://github.com/Kmln/RFQuiltLayout.git</string>
 		<key>DE7803A4-482D-409D-8A28-EFD54FA8BCED</key>
 		<string>https://github.com/Kmln/AsyncImageDownloader.git</string>
 	</dict>
@@ -21,6 +23,8 @@
 	<dict>
 		<key>7D95F906-6EE8-4181-A994-A0D0CC1104A9</key>
 		<string>..</string>
+		<key>CB9BC561-A826-42F4-AD0A-D524CF76B932</key>
+		<string>../../RFQuiltLayout</string>
 		<key>DE7803A4-482D-409D-8A28-EFD54FA8BCED</key>
 		<string>../../AsyncImageDownloader</string>
 	</dict>
@@ -47,6 +51,14 @@
 			<string>7D95F906-6EE8-4181-A994-A0D0CC1104A9</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CB9BC561-A826-42F4-AD0A-D524CF76B932</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RFQuiltLayout</string>
 		</dict>
 	</array>
 </dict>

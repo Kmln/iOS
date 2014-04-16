@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4C06D0E918FAFF3300B7F408 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0E818FAFF3300B7F408 /* Constants.m */; };
+		4C06D0EC18FCE1AB00B7F408 /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0EB18FCE1AB00B7F408 /* ShoppingViewController.m */; };
+		4C06D0F018FCE1E700B7F408 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0EF18FCE1E700B7F408 /* RFQuiltLayout.m */; };
+		4C06D10018FCE28A00B7F408 /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0FF18FCE28A00B7F408 /* AsyncImageDownloader.m */; };
 		4C7925D718EE7386000531F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925D618EE7386000531F1 /* Foundation.framework */; };
 		4C7925D918EE7387000531F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925D818EE7387000531F1 /* CoreGraphics.framework */; };
 		4C7925DB18EE7387000531F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925DA18EE7387000531F1 /* UIKit.framework */; };
@@ -24,7 +27,6 @@
 		4C79260518EE7387000531F1 /* KameleonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C79260418EE7387000531F1 /* KameleonTests.m */; };
 		4C79261018F3B018000531F1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C79260F18F3B018000531F1 /* ProfileViewController.m */; };
 		4C79261318F3B31D000531F1 /* ClosetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C79261218F3B31D000531F1 /* ClosetViewController.m */; };
-		4C79261818F3D251000531F1 /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C79261718F3D251000531F1 /* AsyncImageDownloader.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,12 @@
 /* Begin PBXFileReference section */
 		4C06D0E718FAFF3300B7F408 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4C06D0E818FAFF3300B7F408 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		4C06D0EA18FCE1AB00B7F408 /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
+		4C06D0EB18FCE1AB00B7F408 /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
+		4C06D0EE18FCE1E700B7F408 /* RFQuiltLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFQuiltLayout.h; sourceTree = "<group>"; };
+		4C06D0EF18FCE1E700B7F408 /* RFQuiltLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFQuiltLayout.m; sourceTree = "<group>"; };
+		4C06D0FE18FCE28A00B7F408 /* AsyncImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageDownloader.h; path = ../../AsyncImageDownloader/iOS/AsyncImageDownloader.h; sourceTree = "<group>"; };
+		4C06D0FF18FCE28A00B7F408 /* AsyncImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageDownloader.m; path = ../../AsyncImageDownloader/iOS/AsyncImageDownloader.m; sourceTree = "<group>"; };
 		4C7925D318EE7386000531F1 /* Kameleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kameleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7925D618EE7386000531F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C7925D818EE7387000531F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,8 +70,6 @@
 		4C79260F18F3B018000531F1 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		4C79261118F3B31D000531F1 /* ClosetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClosetViewController.h; sourceTree = "<group>"; };
 		4C79261218F3B31D000531F1 /* ClosetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClosetViewController.m; sourceTree = "<group>"; };
-		4C79261618F3D251000531F1 /* AsyncImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageDownloader.h; path = ../../AsyncImageDownloader/iOS/AsyncImageDownloader.h; sourceTree = "<group>"; };
-		4C79261718F3D251000531F1 /* AsyncImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageDownloader.m; path = ../../AsyncImageDownloader/iOS/AsyncImageDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 		4C06D0E518FAF37800B7F408 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4C06D0EA18FCE1AB00B7F408 /* ShoppingViewController.h */,
+				4C06D0EB18FCE1AB00B7F408 /* ShoppingViewController.m */,
 				4C79260E18F3B018000531F1 /* ProfileViewController.h */,
 				4C79260F18F3B018000531F1 /* ProfileViewController.m */,
 				4C79261118F3B31D000531F1 /* ClosetViewController.h */,
@@ -110,11 +118,31 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
+		4C06D0ED18FCE1E700B7F408 /* RFQuiltLayout */ = {
+			isa = PBXGroup;
+			children = (
+				4C06D0EE18FCE1E700B7F408 /* RFQuiltLayout.h */,
+				4C06D0EF18FCE1E700B7F408 /* RFQuiltLayout.m */,
+			);
+			name = RFQuiltLayout;
+			path = ../../RFQuiltLayout/RFQuiltLayout;
+			sourceTree = "<group>";
+		};
+		4C06D10118FCE29500B7F408 /* AsyncImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				4C06D0FE18FCE28A00B7F408 /* AsyncImageDownloader.h */,
+				4C06D0FF18FCE28A00B7F408 /* AsyncImageDownloader.m */,
+			);
+			name = AsyncImageDownloader;
+			sourceTree = "<group>";
+		};
 		4C7925CA18EE7386000531F1 = {
 			isa = PBXGroup;
 			children = (
 				4C7925DC18EE7387000531F1 /* Kameleon */,
-				4C79261918F3D270000531F1 /* AsyncImageDownloader */,
+				4C06D10118FCE29500B7F408 /* AsyncImageDownloader */,
+				4C06D0ED18FCE1E700B7F408 /* RFQuiltLayout */,
 				4C7925FE18EE7387000531F1 /* KameleonTests */,
 				4C7925D518EE7386000531F1 /* Frameworks */,
 				4C7925D418EE7386000531F1 /* Products */,
@@ -183,15 +211,6 @@
 				4C79260118EE7387000531F1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4C79261918F3D270000531F1 /* AsyncImageDownloader */ = {
-			isa = PBXGroup;
-			children = (
-				4C79261618F3D251000531F1 /* AsyncImageDownloader.h */,
-				4C79261718F3D251000531F1 /* AsyncImageDownloader.m */,
-			);
-			name = AsyncImageDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,11 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C7925E718EE7387000531F1 /* AppDelegate.m in Sources */,
+				4C06D10018FCE28A00B7F408 /* AsyncImageDownloader.m in Sources */,
 				4C7925E318EE7387000531F1 /* main.m in Sources */,
 				4C79261318F3B31D000531F1 /* ClosetViewController.m in Sources */,
 				4C79261018F3B018000531F1 /* ProfileViewController.m in Sources */,
-				4C79261818F3D251000531F1 /* AsyncImageDownloader.m in Sources */,
 				4C06D0E918FAFF3300B7F408 /* Constants.m in Sources */,
+				4C06D0EC18FCE1AB00B7F408 /* ShoppingViewController.m in Sources */,
+				4C06D0F018FCE1E700B7F408 /* RFQuiltLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

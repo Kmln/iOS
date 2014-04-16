@@ -8,6 +8,7 @@
         <scene sceneID="aBQ-P5-i8R">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="Kul-0u-o5Y" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Zh5-Cg-6rZ"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="GgF-uQ-y9V">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -17,6 +18,7 @@
                     <connections>
                         <segue destination="boz-d4-hXY" kind="relationship" relationship="viewControllers" id="lMb-v1-3GD"/>
                         <segue destination="0E8-q3-Sdy" kind="relationship" relationship="viewControllers" id="Fft-c8-Fdo"/>
+                        <segue destination="Oxp-Ta-RQ8" kind="relationship" relationship="viewControllers" id="Nrb-a8-aV8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3T-fa-eQO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,7 +146,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fu1-AP-YAE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="292"/>
+            <point key="canvasLocation" x="278" y="292"/>
+        </scene>
+        <!--Shopping View Controller - Item-->
+        <scene sceneID="4Qj-yu-1wv">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="Oxp-Ta-RQ8" customClass="ShoppingViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="I0f-2k-Ob4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ke3-t8-xwD">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1l8-Nh-aQB">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Oxp-Ta-RQ8" id="7mz-Az-3ft"/>
+                            <outlet property="delegate" destination="Oxp-Ta-RQ8" id="goC-jn-1BN"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="Item" id="KdL-YR-y0D"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g03-HJ-dO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="979"/>
         </scene>
         <!--Navigation Controller - Profile-->
         <scene sceneID="jzH-eG-Sx3">
