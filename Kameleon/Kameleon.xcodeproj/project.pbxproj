@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C06D0E918FAFF3300B7F408 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0E818FAFF3300B7F408 /* Constants.m */; };
-		4C06D0EC18FCE1AB00B7F408 /* ShoppingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0EB18FCE1AB00B7F408 /* ShoppingViewController.m */; };
-		4C06D0F018FCE1E700B7F408 /* RFQuiltLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0EF18FCE1E700B7F408 /* RFQuiltLayout.m */; };
 		4C06D10018FCE28A00B7F408 /* AsyncImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D0FF18FCE28A00B7F408 /* AsyncImageDownloader.m */; };
+		4C06D10B1906472000B7F408 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C06D10A1906472000B7F408 /* UIImage+Resize.m */; };
 		4C7925D718EE7386000531F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925D618EE7386000531F1 /* Foundation.framework */; };
 		4C7925D918EE7387000531F1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925D818EE7387000531F1 /* CoreGraphics.framework */; };
 		4C7925DB18EE7387000531F1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7925DA18EE7387000531F1 /* UIKit.framework */; };
@@ -42,12 +41,10 @@
 /* Begin PBXFileReference section */
 		4C06D0E718FAFF3300B7F408 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		4C06D0E818FAFF3300B7F408 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		4C06D0EA18FCE1AB00B7F408 /* ShoppingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingViewController.h; sourceTree = "<group>"; };
-		4C06D0EB18FCE1AB00B7F408 /* ShoppingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingViewController.m; sourceTree = "<group>"; };
-		4C06D0EE18FCE1E700B7F408 /* RFQuiltLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFQuiltLayout.h; sourceTree = "<group>"; };
-		4C06D0EF18FCE1E700B7F408 /* RFQuiltLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFQuiltLayout.m; sourceTree = "<group>"; };
 		4C06D0FE18FCE28A00B7F408 /* AsyncImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncImageDownloader.h; path = ../../AsyncImageDownloader/iOS/AsyncImageDownloader.h; sourceTree = "<group>"; };
 		4C06D0FF18FCE28A00B7F408 /* AsyncImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncImageDownloader.m; path = ../../AsyncImageDownloader/iOS/AsyncImageDownloader.m; sourceTree = "<group>"; };
+		4C06D1091906472000B7F408 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "../../UIImage-Resize/UIImage+Resize.h"; sourceTree = "<group>"; };
+		4C06D10A1906472000B7F408 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "../../UIImage-Resize/UIImage+Resize.m"; sourceTree = "<group>"; };
 		4C7925D318EE7386000531F1 /* Kameleon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kameleon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7925D618EE7386000531F1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C7925D818EE7387000531F1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,8 +96,6 @@
 		4C06D0E518FAF37800B7F408 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C06D0EA18FCE1AB00B7F408 /* ShoppingViewController.h */,
-				4C06D0EB18FCE1AB00B7F408 /* ShoppingViewController.m */,
 				4C79260E18F3B018000531F1 /* ProfileViewController.h */,
 				4C79260F18F3B018000531F1 /* ProfileViewController.m */,
 				4C79261118F3B31D000531F1 /* ClosetViewController.h */,
@@ -118,16 +113,6 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
-		4C06D0ED18FCE1E700B7F408 /* RFQuiltLayout */ = {
-			isa = PBXGroup;
-			children = (
-				4C06D0EE18FCE1E700B7F408 /* RFQuiltLayout.h */,
-				4C06D0EF18FCE1E700B7F408 /* RFQuiltLayout.m */,
-			);
-			name = RFQuiltLayout;
-			path = ../../RFQuiltLayout/RFQuiltLayout;
-			sourceTree = "<group>";
-		};
 		4C06D10118FCE29500B7F408 /* AsyncImageDownloader */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,12 +122,21 @@
 			name = AsyncImageDownloader;
 			sourceTree = "<group>";
 		};
+		4C06D10C1906474500B7F408 /* UIImage+Resize */ = {
+			isa = PBXGroup;
+			children = (
+				4C06D1091906472000B7F408 /* UIImage+Resize.h */,
+				4C06D10A1906472000B7F408 /* UIImage+Resize.m */,
+			);
+			name = "UIImage+Resize";
+			sourceTree = "<group>";
+		};
 		4C7925CA18EE7386000531F1 = {
 			isa = PBXGroup;
 			children = (
 				4C7925DC18EE7387000531F1 /* Kameleon */,
+				4C06D10C1906474500B7F408 /* UIImage+Resize */,
 				4C06D10118FCE29500B7F408 /* AsyncImageDownloader */,
-				4C06D0ED18FCE1E700B7F408 /* RFQuiltLayout */,
 				4C7925FE18EE7387000531F1 /* KameleonTests */,
 				4C7925D518EE7386000531F1 /* Frameworks */,
 				4C7925D418EE7386000531F1 /* Products */,
@@ -320,8 +314,7 @@
 				4C79261318F3B31D000531F1 /* ClosetViewController.m in Sources */,
 				4C79261018F3B018000531F1 /* ProfileViewController.m in Sources */,
 				4C06D0E918FAFF3300B7F408 /* Constants.m in Sources */,
-				4C06D0EC18FCE1AB00B7F408 /* ShoppingViewController.m in Sources */,
-				4C06D0F018FCE1E700B7F408 /* RFQuiltLayout.m in Sources */,
+				4C06D10B1906472000B7F408 /* UIImage+Resize.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

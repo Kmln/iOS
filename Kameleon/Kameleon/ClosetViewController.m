@@ -8,6 +8,7 @@
 
 #import "ClosetViewController.h"
 #import "AsyncImageDownloader.h"
+#import "UIImage+Resize.h"
 
 @interface ClosetViewController ()
 
@@ -19,23 +20,42 @@
 {
     [super viewDidLoad];
     
-    array = [[NSMutableArray alloc] init];
+    url = @"http://ecx.images-amazon.com/images/I/";
     
-//    [array addObject:@"Pic1"];
-//    [array addObject:@"Pic2"];
-//    [array addObject:@"Pic3"];
-//    [array addObject:@"Pic4"];
-//    [array addObject:@"Pic5"];
+    fileArray = [[NSMutableArray alloc] init];
     
-    [array addObject:@"http://ecx.images-amazon.com/images/I/412MUPEU2QL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/51nJDARRjRL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/518ZhCT%2BHlL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/41ScNjKSvVL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/41KHf2LuxeL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/41yO1qM6xtL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/41wbox4ULzL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/41Bm27iHkTL.jpg"];
-    [array addObject:@"http://ecx.images-amazon.com/images/I/31mFyjqmErL.jpg"];
+    [fileArray addObject:[url stringByAppendingString:@"412MUPEU2QL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"51nJDARRjRL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"518ZhCT%2BHlL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"41ScNjKSvVL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"41KHf2LuxeL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"41yO1qM6xtL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"41wbox4ULzL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"41Bm27iHkTL.jpg"]];
+    [fileArray addObject:[url stringByAppendingString:@"31mFyjqmErL.jpg"]];
+    
+    dictionayImages = [[NSMutableDictionary alloc] init];
+    
+    for (int i = 0; i < fileArray.count; i++)
+    {
+        [[[AsyncImageDownloader alloc] initWithMediaURL:[fileArray objectAtIndex:i]
+          successBlock:^(UIImage *image)
+          {
+              CGSize imageSize = CGSizeMake(image.size.width * 0.8f, image.size.height * 0.8f);
+              UIImage * resizedImage = [image resizedImageToSize:imageSize];
+              [dictionayImages setObject:resizedImage forKey:[NSNumber numberWithInt:i]];
+              
+              //[self.collectionView reloadItemsAtIndexPaths:self.collectionView.indexPathsForVisibleItems];
+              [self.collectionView reloadData];
+              
+          }
+          failBlock:^(NSError *error)
+          {
+              NSLog(@"Failed to download image due to %@!", error);
+          }
+          ] startDownload];
+    }
+
 
 }
 
@@ -52,41 +72,28 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [array count];
-//    return 1;
+    return [fileArray count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ImageCell" forIndexPath:indexPath];
     
-//    UILabel *label = (UILabel *)[cell viewWithTag:101];
-//    label.text = [array objectAtIndex:indexPath.row];
-//    
-//    [cell.layer setBorderWidth:2.0f];
-//    [cell.layer setBorderColor:[UIColor whiteColor].CGColor];
-//    
-//    [cell.layer setCornerRadius:50.0f];
-//    
-//    
-    
-    
-    //UIImageView *myImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 120, 120)];
-    
     UIImageView *myImageView = (UIImageView *)[cell viewWithTag:102];
-	
-    [[[AsyncImageDownloader alloc] initWithMediaURL:[array objectAtIndex:indexPath.row]
-    successBlock:^(UIImage *image)
-    {
-        [myImageView setImage:image];
-    }
-    failBlock:^(NSError *error)
-    {
-        NSLog(@"Failed to download image due to %@!", error);
-    }]
-     startDownload];
+    
+    
+	[myImageView setImage:[dictionayImages objectForKey:[NSNumber numberWithInt:indexPath.row]]];
+    [myImageView sizeToFit];
     
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    UIImage *image = [dictionayImages objectForKey:[NSNumber numberWithInt:indexPath.row]];
+    
+    return image.size;
 }
 
 @end

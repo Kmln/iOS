@@ -10,8 +10,11 @@
 
 @interface ClosetViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 {
-    NSMutableArray *array;
+    NSString * url;
+    NSMutableArray * fileArray;
+    NSMutableDictionary * dictionayImages;
 }
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 
 @end
