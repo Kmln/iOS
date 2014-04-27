@@ -12,7 +12,6 @@
 {
     NSString * url;
     NSMutableArray * fileArray;
-    NSMutableDictionary * dictionayImages;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
