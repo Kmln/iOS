@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F399A1F1-009A-417E-B66A-4AF7165C1695</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Kameleon</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7D95F906-6EE8-4181-A994-A0D0CC1104A9</key>
+		<string>https://github.com/Kmln/iOS.git</string>
+		<key>DE7803A4-482D-409D-8A28-EFD54FA8BCED</key>
+		<string>https://github.com/Kmln/AsyncImageDownloader.git</string>
+		<key>E971AD9B-6649-4D92-B8AC-26D3313D66CD</key>
+		<string>https://github.com/Kmln/UIImage-Resize.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Kameleon.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7D95F906-6EE8-4181-A994-A0D0CC1104A9</key>
+		<string>..</string>
+		<key>DE7803A4-482D-409D-8A28-EFD54FA8BCED</key>
+		<string>../../AsyncImageDownloader</string>
+		<key>E971AD9B-6649-4D92-B8AC-26D3313D66CD</key>
+		<string>../../UIImage-Resize</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Kmln/iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7D95F906-6EE8-4181-A994-A0D0CC1104A9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE7803A4-482D-409D-8A28-EFD54FA8BCED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AsyncImageDownloader</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7D95F906-6EE8-4181-A994-A0D0CC1104A9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E971AD9B-6649-4D92-B8AC-26D3313D66CD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UIImage-Resize</string>
+		</dict>
+	</array>
+</dict>
+</plist>
